@@ -1,0 +1,53 @@
+<!-- ----------------------------------------------------------------------
+Program       :jquery effects - SlideDown / SlideUp / SlideToggle
+Date          :28-11-2018
+Auther        :Sumit Patil
+Institute     :WebStack Academy (P) Ltd.
+------------------------------------------------------------------------ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery effects - SlideDown / SlideUp / SlideToggle</title>
+
+    <script src="jquery/jquery-3.3.1.min.js" type="text/javascript"> </script>
+     <style>
+     #panel,#flip{
+         padding:5px;
+         text-align:center;
+         background-color:pink;
+         border: solid 1px grey;   
+     }  
+     #pane
+     {
+         padding:50px;
+         display: none; 
+     }
+     </style>
+    <script>
+     $(document).ready(function(){
+        
+        $("#flip").click(function(){
+             $("#pane").slideDown(3000);
+             
+        });
+        $("#flip").click(function(){
+             $("#pane").slideUp(3000);
+             
+        });
+        
+     });
+    </script>
+</head>
+<body>
+    <h2>jquery effects - SlideDown / SlideUp / SlideToggle</h2>
+    
+
+     <div id="flip">Click to hide the panel down</div>
+     <div id="pane">Jquery - slideDown effect.....</div>
+
+      
+    </body>
+</html>

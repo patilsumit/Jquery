@@ -1,0 +1,48 @@
+<!-- ----------------------------------------------------------------------
+Program       :jquery Effects - Callback
+Date          :28-11-2018
+Auther        :Sumit Patil
+Institute     :WebStack Academy (P) Ltd.
+------------------------------------------------------------------------ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery Effects - Callback</title>
+
+    <script src="jquery/jquery-3.3.1.min.js" type="text/javascript"> </script>
+     
+     
+    <script>
+     $(document).ready(function(){
+       
+       //Jquery with callback
+       $("#withcallback").click(function(){
+           $("#withcallbacktext").hide("slow",function(){
+               alert("The paragraph is now hidden");
+           });
+       });
+
+       //Jquery without callback
+       $("#withoutcallback").click(function(){
+           $("#withoutcallbacktext").hide("slow");
+               alert("The paragraph is now hidden");
+           
+       });
+        
+     });
+    </script>
+</head>
+<body>
+    <h2>jquery effects - Callbacks</h2>
+    
+      <button id="withcallback">With callback effect</button>
+      <p id="withcallbacktext">Jquery testing with callback...</p>
+
+      <button id="withoutcallback">Without callback effect</button>
+      <p id="withoutcallbacktext">Jquery testing without callback...</p>
+      
+    </body>
+</html>

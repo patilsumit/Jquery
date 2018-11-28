@@ -1,0 +1,53 @@
+<!-- ----------------------------------------------------------------------
+Program       :JQuery Events
+Date          :27-11-2018
+Auther        :Sumit Patil
+Institute     :WebStack Academy (P) Ltd.
+------------------------------------------------------------------------ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery Events</title>
+
+    <script src="jquery/jquery-3.3.1.min.js" type="text/javascript"> </script>
+
+    <script>
+     $(document).ready(function(){
+        
+     $("#dbclicktest").dblclick(function(){
+         console.log("Double Click event captured...");
+     });
+
+     $("#hovertest").hover(function(){
+         console.log("Inside the hover paragraph...");
+     },
+     function()
+     {
+         console.log("outside the hover paragraph...");
+     });
+
+
+         /*Handling Multiple events using on method*/
+         $("#multipletest").on({
+             mouseenter:function(){
+                 $(this).css("background-color","red");
+             },
+             mouseleave:function(){
+                 $(this).css("background-color","blue");
+             }
+         })
+     });
+    </script>
+</head>
+<body>
+     <h2>Event handling with JQuery....</h2>
+     <p id="dbclicktest">Double click this paragraph</p>
+     <p id="hovertest">Double click this paragraph</p>
+     <p id="multipletest">Enter, click and Leave this paragraph</p>
+     
+      
+</body>
+</html>

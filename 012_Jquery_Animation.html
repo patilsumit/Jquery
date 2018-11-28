@@ -1,0 +1,39 @@
+<!-- ----------------------------------------------------------------------
+Program       :jquery Effects - Animation
+Date          :28-11-2018
+Auther        :Sumit Patil
+Institute     :WebStack Academy (P) Ltd.
+------------------------------------------------------------------------ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery Effects - Animation</title>
+
+    <script src="jquery/jquery-3.3.1.min.js" type="text/javascript"> </script>
+     
+     
+    <script>
+     $(document).ready(function(){
+       $("button").click(function(){
+           var div=$("#animbox");
+          div.animate({height:'300px',opacity:'0.4'},"slow");
+          div.animate({width:'300px',opacity:'0.8'},"slow");
+          div.animate({height:'100px',opacity:'0.4'},"slow");
+          div.animate({width:'100px',opacity:'0.8'},"slow");
+       }); 
+        
+     });
+    </script>
+</head>
+<body>
+    <h2>jquery effects - Animation</h2>
+    
+      <button>Resize The Box</button>
+      <br><br>
+         <div id="animbox" style="background: red;height: 50px;width: 50px;position: absolute"></div>
+      
+    </body>
+</html>
